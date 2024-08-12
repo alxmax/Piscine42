@@ -248,7 +248,7 @@ C04:
  ft_putstr(char *str)
 
 -  Exercise 02 : ft_putnbr
- • Create a function that displays the number entered as a parameter. The function
+-   Create a function that displays the number entered as a parameter. The function
  has to be able to display all possible values within an int type variable.
  • Here’s how it should be prototyped :
  void ft_putnbr(int nb);
