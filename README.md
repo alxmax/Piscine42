@@ -1,4 +1,4 @@
-This repository contains all the exercises i have completed from 42 Piscine program
+This repository contains all the exercises i have completed from 42 Piscine program until now.
 
 C00:
 - Exercise 00: ft_putchar
