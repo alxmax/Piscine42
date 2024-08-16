@@ -3,34 +3,35 @@
 int ft_atoi(char *str)
 {   
     int i;
-    int len;
-    int flag;
-    len = 0;
     i=0;
-    flag = 1;
     int val;
     val=0;
+    int neg;
+    neg = 0;
+ 
     while(str[i])
-    {   
-        if(str[i] > '0' && str[i] <='9')
-        {
-            flag = 0;
-        }
-        if(str[i] >= '0' && str[i] <='9' && flag ==0)
-        {
-            len++;
-        }
-        i++;
-    }
-    i=0;
-    while(str[i] && i<1)
     {
-        if(str[i] > '0' && str[i] <= '9')
+        //printf("char %c \n",str[i]); DEBUG 
+        if(str[i] >= '0' && str[i] <= '9')
+        {   
+            val *=10;
+            val+=(str[i]-'0');
+
+            //printf("digit :%d \n",val); DEBUG
+        }
+        else if(str[i] == '-')
         {
-        val=(str[i]-'0')*100;
-        len--;
+            neg++;
+        }
+        else if (str[i] > '9' || (val>0 && str[i] == ' '))
+        {
+            break;
         }
     i++;
+    }
+    if(neg%2==1)
+    {
+        val=val*-1;       
     }
     return val;
 }
